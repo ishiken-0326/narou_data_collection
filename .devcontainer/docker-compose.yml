@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  python:
+    image: narou_data_collect/python:1.0
+    build: ./python
+    container_name: 'narou_data_collenct_python'
+    stdin_open: true
+    tty: true
+    working_dir: '/tmp/work'
+    volumes:
+      - ../python:/tmp/work
+      
